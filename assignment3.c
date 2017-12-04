@@ -147,7 +147,7 @@ int ret;
 				printk(KERN_ALERT "User exit manually");
 				return -1;
 			}
-  		ret =  copy_from_user(message_buffer,&buffer,sizeof(message_buffer));            
+  		ret =  copy_from_user(message_buffer,buffer,1);            
 		if(ret<0)
 			{
 				printk(KERN_ALERT "Copy_from_user Error");
